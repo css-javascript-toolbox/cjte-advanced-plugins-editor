@@ -34,8 +34,11 @@ var CJTBlockPluginBase;
 			regularEditor.empty();
 			// Turns into ACE Editor
 			this.editor = ace.edit('cjteape-newcontent');
+			// Getting file type
+			var fileName = $('#template').find('input[name="file"]').val();
+			var fileExtension = fileName.substring(fileName.length - 3);
 			// Set options
-			this.editor.getSession().setMode('ace/mode/php');
+			this.editor.getSession().setMode('ace/mode/' + fileExtension);
 			// Theme object
 			this.theme = {};
 			// Create Dummy Block AcEditor
