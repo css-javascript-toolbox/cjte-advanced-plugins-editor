@@ -15,3 +15,5 @@
 
 .cjt-tb-link {height: 22px;display: inline-block;width: 20px;}
 .icons-group {height: 400px;}
+
+.cjt-toolbox .icons-group .popup-menu {z-index: 7;}
