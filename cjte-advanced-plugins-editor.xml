@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" loadMethod="auto" class="CJTEAdvancedPluginsEditor" requireFrameworkVersion="4.0">
+	<getInvolved>
+		<event type="CJTPlugin.load" />
+	</getInvolved>
+	<license title="Advanced Plugins Editor" updateSrc="CJT">
+		<name text="Premium">Advanced Plugins Editor</name>
+	</license>
+</extension>

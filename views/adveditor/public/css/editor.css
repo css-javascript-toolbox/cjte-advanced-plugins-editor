@@ -1,0 +1,17 @@
+#cjteape-newcontent {height: 600px; width: auto; position: relative;}
+#newcontent {display: none;}
+#template div {margin-right: 0 !important;}
+
+/** Editor Toolbox */
+.cjt-toolbox.editor-toolbox {
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 350px;
+	top: 5px;	
+	margin-left: 10px;
+	display: none;
+}
+
+.cjt-tb-link {height: 22px;display: inline-block;width: 20px;}
+.icons-group {height: 400px;}
