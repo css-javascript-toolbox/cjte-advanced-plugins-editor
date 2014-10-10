@@ -49,7 +49,9 @@ class CJTEAPE_Views_AdvEditor_View extends CJTView {
 			'framework:js:ace(loadMethod=Tag, lookFor=ace)',
 			'framework:js:cookies:{CJT-}jquery.cookies.2.2.0',
 			'framework:js:ui:{CJT-}jquery.toolbox',
+			'framework:js:cookies:{CJT-}jquery.cookies.2.2.0',
 			'extension://cjte-advanced-plugins-editor/views:adveditor:public:js:{CJTEAPE_Views_AdvEditor_View-}_dummycjtblock',
+			'extension://cjte-advanced-plugins-editor/views:adveditor:public:js:{CJTEAPE_Views_AdvEditor_View-}_extensiondefinition',
 		));
 		# Editor MAIN/CORE/LOADER module must be the latest script to run
 		$allScripts[] = 'extension://cjte-advanced-plugins-editor/views:adveditor:public:js:{CJTEAPE_Views_AdvEditor_View-}_editor';
