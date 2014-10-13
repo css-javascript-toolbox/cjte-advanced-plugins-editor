@@ -10,6 +10,31 @@ var CJTBlockPluginBase;
 (function($) {
 	
 	/**
+	* DUMMY Blocks Manager container
+	* 
+	* @type T_JS_FUNCTION
+	*/
+	CJTBlocksPage = new function() {
+		
+		/**
+		* Ajax Server prototype object
+		* 
+		* @type T_JS_FUNCTION
+		*/
+		this.server = CJTServer;
+		
+		/**
+		* 
+		*/
+		this.initialize = function() {
+			this.server.securityToken = $('#cjt-security-token').val();
+		};
+		
+		// Seet server security token
+		$($.proxy(this.initialize, this));
+	};
+
+	/**
 	* 
 	*/
 	CJTBlockPluginBase = function() {
@@ -23,7 +48,9 @@ var CJTBlockPluginBase;
 			// Add ACE Editor div instead of textarea
 			var editorElement = $('<div class="cjt-toolbox" id="cjteape-newcontent"></div>').html(regularEditor.html());
 			// Dummy Block box
-			var blockBox = $('<span id="dummy-block-container"></span>').append(editorElement).insertBefore(regularEditor);
+			var blockBox = $('<span id="dummy-block-container" class="cjcodeblock"><div class="cjt-toolbox editor-toolbox"><div class="icons-group"></div></div><div class="inside-container"><div class="inside"></div></div></span>').append(editorElement).insertBefore(regularEditor);
+			// Push Dummy Block object into Block Box dummy element
+			blockBox.get(0).CJTBlock = this;
 			// Clear regular editor
 			regularEditor.empty();
 			// Turns into ACE Editor
@@ -36,8 +63,43 @@ var CJTBlockPluginBase;
 			editorSession.setMode('ace/mode/' + fileExtension);
 			// Editor default options.
 			this.editor.setOptions({showPrintMargin : false});
+			// Set focus
+			this.editor.focus();
+			// Extend editor methods
+			this.editor.setValuePossibleUndo = function(value) {
+				// Directly clear using setValue('') prevent 'undo' action!
+				// Select all text.
+				this.selectAll();
+				// Replace content with empty string!
+				this.getSession().replace(this.getSelectionRange(), value);
+				this.focus();
+			};
 			// Theme object
 			this.theme = {};
+			// Dummy edit Block name element to have Toolbox Block Menu added after!
+			this.elements = new function() {
+				
+				/**
+				* 
+				*/
+				this.editBlockName = $('<div id="dummy-cjt-block-name"></div>').insertBefore(editorElement);
+				
+			};
+			
+			/**
+			* Screen modes DOCK!
+			*/
+			this.extraDocks = [];
+			this.defaultDocks = [{element : editorElement, pixels : -6}];
+			CJTBlockObjectPluginDockModule.plug(this);
+			
+			/**
+			* 
+			*/
+			this.getInEditFile = function() {
+				return fileName;
+			};
+		
 			// Create Dummy Block AcEditor
 			this.block = new (function(advEditor) {
 				
@@ -139,9 +201,6 @@ var CJTBlockPluginBase;
 		
 			// Set scroll top
 			editorSession.setScrollTop(this.block.getFileScrollPosition());
-
-			// Create Editor toolbox markup
-			$('<div class="cjt-toolbox editor-toolbox"><div class="icons-group"></div></div>').insertBefore(editorElement);
 			
 			/**
 			* 

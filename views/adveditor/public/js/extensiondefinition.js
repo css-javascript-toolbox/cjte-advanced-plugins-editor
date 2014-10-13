@@ -19,6 +19,13 @@
 		* 
 		* @type String
 		*/
+		var type = 'plugin';
+		
+		/**
+		* put your comment there...
+		* 
+		* @type String
+		*/
 		var name = 'plugins';
 		
 		/**
@@ -28,6 +35,13 @@
 		*/
 		this.getName = function() {
 			return name;
+		};
+		
+		/**
+		* 
+		*/
+		this.getType = function() {
+			return type;
 		};
 		
 	};

@@ -2,18 +2,52 @@
 #newcontent {display: none;}
 #template div {margin-right: 0 !important;}
 
+.inside-container {position: relative;}
+.ace_status-indicator {
+	position: absolute;
+	left: 137px;
+	top: 6px;
+	color: red;
+	font-size: 18px;
+	padding: 4px 10px;
+}
+
+#dummy-block-container {background-color: #f1f1f1 !important;}
+
 /** Editor Toolbox */
 .cjt-toolbox.editor-toolbox {
 	position: relative;
 	float: right;
 	width: 40px;
-	height: 350px;
 	top: 5px;	
 	margin-left: 10px;
 	display: none;
+	margin-top: 15px;
 }
 
 .cjt-tb-link {height: 22px;display: inline-block;width: 20px;}
-.icons-group {height: 400px;}
 
 .cjt-toolbox .icons-group .popup-menu {z-index: 7;}
+#block-menu {
+	position: static !important;
+	padding: 5px !important;
+	display: none;
+	margin-top: 4px !important; 
+}
+
+#block-menu ul {z-index: 5;}
+#cjt-inline-popup {display: none;}
+
+span#dummy-block-container.fullscreen {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+}
+#dummy-block-container.fullscreen #cjteape-newcontent {height: 100%;}
+
+#ace_settingsmenu{z-index: 1000000 !important;}
+
+span#dummy-block-container.fullscreen #block-menu {margin-top: 0 !important;}
