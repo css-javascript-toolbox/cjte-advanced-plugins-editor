@@ -43,7 +43,7 @@ class CJTEAPEDefaultController extends CJTAjaxController {
 		$file = $_GET['file'];
 		$folderKey = $_GET['folder'];
 		$folders = array(
-			'theme' => (WP_CONTENT_DIR . 'themes'), 
+			'theme' => (WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'themes'), 
 			'plugin' => WP_PLUGIN_DIR
 			);
 		# Jails the request inside only theme and plugin folders
