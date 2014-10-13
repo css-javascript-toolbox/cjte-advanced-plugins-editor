@@ -1,7 +1,7 @@
-=== CJTe Shortcode Widget ===
+=== CJTe Advanced Plugins Editor ===
 Contributors: wipeoutmedia
 Author URL: http://css-javascript-toolbox.com
-Tags: cjt-widget, cjt-shortcode, cjt-sidebar, cjt, cjte
+Tags: plugins, editor, development, cjt, cjte, syntax, highlights
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.9
