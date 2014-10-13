@@ -56,7 +56,7 @@ var CJTBlockPluginBase;
 			// Turns into ACE Editor
 			this.editor = ace.edit('cjteape-newcontent');
 			// Getting file type
-			var fileName = $('#template').find('input[name="file"]').val();
+			var fileName = CJTEAPEExtDef.getEditFile();
 			var fileExtension = fileName.substring(fileName.length - 3);
 			// Set options
 			var editorSession = this.editor.getSession();

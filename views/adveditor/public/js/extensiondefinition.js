@@ -26,8 +26,31 @@
 		* 
 		* @type String
 		*/
-		var name = 'plugins';
+		var module = 'CJTEAPE';
 		
+		/**
+		* put your comment there...
+		* 
+		* @type String
+		*/
+		var name = 'plugins';
+
+		/**
+		* 
+		*/
+		this.getEditFile = function() {
+			return $('#template').find('input[name="file"]').val()
+		};
+		
+		/**
+		* put your comment there...
+		* 
+		* @type String
+		*/
+		this.getModuleName = function() {
+			return module;
+		};
+			
 		/**
 		* put your comment there...
 		* 

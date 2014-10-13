@@ -32,7 +32,7 @@
 		/**
 		* 
 		*/
-		this.cjtserver = new CJTModuleServer('CJTEAPE');
+		this.cjtserver = new CJTModuleServer(CJTEAPEExtDef.getModuleName());
 	
 		/**
 		* 
