@@ -63,9 +63,9 @@ class CJTEAPE_Views_AdvEditor_View extends CJTView {
 		$dummyBlocksManagerView = new CJTBlocksManagerView();
 		# Enqueue scripts and styles
 		add_action('admin_print_styles', array(__CLASS__, 'enqueueStyles'));
-		add_action('admin_print_scripts', array(__CLASS__, 'enqueueScripts'));
+		add_action('admin_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
 		# Output Editor Toolbox HTML
-		add_action('print_footer_scripts', array($this, 'outputExtensionsHTML'));
+		add_filter('print_footer_scripts', array($this, 'outputExtensionsHTML'));
 	}
 	
 	/**
@@ -82,7 +82,6 @@ class CJTEAPE_Views_AdvEditor_View extends CJTView {
 			'framework:js:ace(loadMethod=Tag, lookFor=ace)',
 			'framework:js:cookies:{CJT-}jquery.cookies.2.2.0',
 			'framework:js:ui:{CJT-}jquery.toolbox',
-			'framework:js:cookies:{CJT-}jquery.cookies.2.2.0',
 			'views:blocks:block:public:js:plugins:{CJT-}_dockmodule',
 			'extension://cjte-advanced-plugins-editor/views:adveditor:public:js:{CJTEAPE_Views_AdvEditor_View-}_dummycjtblock',
 			'extension://cjte-advanced-plugins-editor/views:adveditor:public:js:{CJTEAPE_Views_AdvEditor_View-}_extensiondefinition',
@@ -111,10 +110,14 @@ class CJTEAPE_Views_AdvEditor_View extends CJTView {
 	/**
 	* put your comment there...
 	* 
+	* @param mixed $printScripts
 	*/
-	public function outputExtensionsHTML() {
+	public function outputExtensionsHTML($printScripts) {
+		// Output Markup for extension and for pariotipated extensions!
 		$content = '<div id="cjt-inline-popup"></div><input type="hidden" id="cjt-security-token" value="' . cssJSToolbox::getSecurityToken() . '" />';
 		echo CJTBlocksManagerView::trigger('CJTBlocksManagerView.loadglobalcomponents', $content);
+		// Chaining!
+		return $printScripts;
 	}
 
 } // End class.
