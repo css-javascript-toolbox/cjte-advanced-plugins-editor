@@ -1,27 +1,34 @@
 === CJTe Advanced Plugins Editor ===
 Contributors: wipeoutmedia
 Author URL: http://css-javascript-toolbox.com
-Tags: plugins, editor, development, cjt, cjte, syntax, highlights
+Tags: plugin editor, plugins editor, code editor, editor, development, cjt, cjte, syntax, highlight, error checker
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.9
-Tested up to: 3.9.2
+Tested up to: 4.0
 Stable tag: 0.5
 
-XXXXXXX
+This plugin extends the default plain-text Plugins Editor with more features such as: line numbers, colour-coded code syntax and error-checking.
 
 == Description ==
-XXXXXX
+If you need more powerful features, then it is highly recommended to install a number of additional support plugins to compliment it. These include the CJT extension plugins:
+Editor Themes
+Editor Toolbox
+Code Auto Completion
 
 == Installation ==
 1. Install and Activate the [CJT Plugin](http://wordpress.org/plugins/css-javascript-toolbox/)
-2. Install/Upload and then Activate the cjte-import-export-tool.zip file using the WordPress Plugin uploader
+2. Install/Upload and then Activate the cjte-advanced-plugins-editor.zip file using the WordPress Plugin uploader
 
 == Frequently Asked Questions ==
+= How do I change themes for the Plugins Editor? =
+You would need to install and activate the Editor Themes extension plugin
 
+= How do I get the toolbar icons to show for the Plugins Editor? =
+You would need to install and activate the Editor Toolbox extension plugin
 
-== Screenshots ==
-
+= How do I get the Code Auto Completion feature to work for the Plugins Editor? =
+You would need to install and activate the Code Auto Completion extension plugin. If you are using either a Mac or a PC, the hot-key combination is Control + Space (i.e. Ctrl + Space bar)
 
 == Changelog ==
 = 0.5 =
@@ -33,7 +40,6 @@ In order to get this Plugin/Extension works [CJT Plugin](http://wordpress.org/pl
 == Credits ==
 Copyright © 2013, Wipeout Media.
 
-This CJT extension plugin is based on the jQuery script by Sergei Zaragulov (http://zoomsl.sergeland.ru). All licenses and attribution notices are kept intact.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
