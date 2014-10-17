@@ -11,10 +11,12 @@ Stable tag: 0.5
 This plugin extends the default plain-text Plugins Editor with more features such as: line numbers, colour-coded code syntax and error-checking.
 
 == Description ==
-If you need more powerful features, then it is highly recommended to install a number of additional support plugins to compliment it. These include the CJT extension plugins:
-Editor Themes
-Editor Toolbox
-Code Auto Completion
+If you need more powerful features, then it is highly recommended to install a number of additional support plugins to compliment it. 
+These include the CJT extension plugins:
+
+- [Editor Themes](http://css-javascript-toolbox.com/extensions/editor-themes)
+- [Editor Toolbox](http://css-javascript-toolbox.com/extensions/editor-toolbox)
+- [Code Auto Completion](http://css-javascript-toolbox.com/extensions/code-auto-completion)
 
 == Installation ==
 1. Install and Activate the [CJT Plugin](http://wordpress.org/plugins/css-javascript-toolbox/)
