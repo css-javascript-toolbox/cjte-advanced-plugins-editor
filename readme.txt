@@ -11,8 +11,7 @@ Stable tag: 0.5
 This plugin extends the default plain-text Plugins Editor with more features such as: line numbers, colour-coded code syntax and error-checking.
 
 == Description ==
-
-Turns Wordpress regular raw text Plugins editor into an Advanced code editor, provides syntax highlights, error detection, line numbers and more.
+The WordPress default Plugins Editor (in Plugins => Editor) is great for doing some custom changes to your Plugins files, although it is rather limited. This is where the CJTe Advanced Theme Editor can help.
 
 == Installation ==
 1. Install and Activate the [CJT Plugin](http://wordpress.org/plugins/css-javascript-toolbox/)
@@ -20,8 +19,16 @@ Turns Wordpress regular raw text Plugins editor into an Advanced code editor, pr
 
 == Frequently Asked Questions ==
 = How do I change themes for the Plugins Editor? =
-You would need to install and activate the Editor Themes extension plugin
+You would need to purchase, install and activate the CJT Developer plugin.
 
+= How do I get the toolbar icons to show for the Plugins Editor? =
+You would need to purchase, install and activate the CJT Developer plugin.
+
+= How do I get the Code Auto Completion feature to work for the Plugins Editor? =
+You would need to purchase, install and activate the CJT Developer plugin. To use this feature on either a Mac or a PC, the hot-key combination is Control + Space (i.e. Ctrl + Space bar)
+
+== Screenshots ==
+1. Advanced Plugins Editor
 
 == Changelog ==
 = 0.5 =
